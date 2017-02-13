@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    vlcopencv.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    vlcopencv.h
 
 FORMS    += mainwindow.ui
 
@@ -45,4 +47,5 @@ LIBS+= $$OPENCVLIB/opencv_core310.lib\
        $$OPENCVLIB/opencv_imgproc310.lib\
        $$OPENCVLIB/opencv_videoio310.lib\
 }
+
 

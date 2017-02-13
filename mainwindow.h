@@ -6,32 +6,11 @@
 #include <QLabel>
 #include <QInputDialog>
 #include <QPixmap>
-#include <QMutex>
-#include <QMutexLocker>
-#include <QTimer>
-#include <vlc/vlc.h>
+#include <QMetaType>
+#include <QObject>
+#include <vlcopencv.h>
 #include <opencv.hpp>
 #include <highgui.hpp>
-
-
-//typedef struct TCallbackParam
-//{
-//    QMutex mutex;
-//    QLabel *video;
-//    uchar *pixels;
-//    cv::Mat* mat;
-//}TCallbackParam;
-
-class TCallBackParam
-{
-public:
-    TCallBackParam(){}
-    QMutex mutex;
-    QLabel *video;
-    uchar *pixels;
-    cv::Mat* mat;
-};
-
 
 namespace Ui {
 class MainWindow;
@@ -47,17 +26,12 @@ public:
 private slots:
     void on_openURLButton_clicked();
 
+    void ShowMat(cv::Mat mat);
+
 private:
-    cv::Mat mat;
     Ui::MainWindow *ui;
-    TCallBackParam* param;
-    libvlc_instance_t *vlcInstance;
-    libvlc_media_player_t *mp = 0;
-    libvlc_media_t *media;
-
-    static void *lock(void *op, void **plane);
-    static void unlock(void *op, void *pic, void *const *plane);
+    VlcOpenCV *vlCV;
 };
-
+Q_DECLARE_METATYPE(cv::Mat)
 
 #endif // MAINWINDOW_H
