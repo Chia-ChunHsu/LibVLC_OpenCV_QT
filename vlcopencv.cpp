@@ -80,7 +80,7 @@ void VlcOpenCV::Start()
 
 void VlcOpenCV::Stop()
 {
-
+    libvlc_media_player_stop(mp);
 }
 
 
