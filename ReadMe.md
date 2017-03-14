@@ -1,4 +1,4 @@
-# LibVLC with OpenCV on Qt 
+
 ## Setting Requirement
 This Project is built on the **Qt 5.7 + OpenCV 3.1 + MSVC 2015 x64**
 Before you using this project, make sure you has already installed the VLC library.
