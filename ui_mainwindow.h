@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -30,8 +30,9 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QLabel *video;
     QPushButton *openURLButton;
+    QPushButton *recordButton;
+    QLabel *video;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -52,25 +53,30 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        video = new QLabel(centralWidget);
-        video->setObjectName(QStringLiteral("video"));
-        QSizePolicy sizePolicy1(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(video->sizePolicy().hasHeightForWidth());
-        video->setSizePolicy(sizePolicy1);
-
-        gridLayout->addWidget(video, 0, 1, 1, 1);
-
         openURLButton = new QPushButton(centralWidget);
         openURLButton->setObjectName(QStringLiteral("openURLButton"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(openURLButton->sizePolicy().hasHeightForWidth());
-        openURLButton->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(openURLButton->sizePolicy().hasHeightForWidth());
+        openURLButton->setSizePolicy(sizePolicy1);
 
         gridLayout->addWidget(openURLButton, 0, 2, 1, 1);
+
+        recordButton = new QPushButton(centralWidget);
+        recordButton->setObjectName(QStringLiteral("recordButton"));
+
+        gridLayout->addWidget(recordButton, 1, 2, 1, 1);
+
+        video = new QLabel(centralWidget);
+        video->setObjectName(QStringLiteral("video"));
+        QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(video->sizePolicy().hasHeightForWidth());
+        video->setSizePolicy(sizePolicy2);
+
+        gridLayout->addWidget(video, 0, 1, 2, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -91,9 +97,10 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        video->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        openURLButton->setText(QApplication::translate("MainWindow", "OPEN", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        openURLButton->setText(QApplication::translate("MainWindow", "OPEN", Q_NULLPTR));
+        recordButton->setText(QApplication::translate("MainWindow", "Record", Q_NULLPTR));
+        video->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
     } // retranslateUi
 
 };

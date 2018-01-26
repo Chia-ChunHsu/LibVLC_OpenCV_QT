@@ -45,6 +45,7 @@ private:
     libvlc_media_player_t *mp = 0;
     libvlc_media_t *media;
 
+
     cv::Mat mat;
     const char *url;
 };
